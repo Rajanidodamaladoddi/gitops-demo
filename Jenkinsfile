@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_USERNAME = "kunchalavikram"
+        DOCKERHUB_USERNAME = "Rajaninandu"
         APP_NAME = "gitops-demo-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
         IMAGE_NAME = "${DOCKERHUB_USERNAME}" + "/" + "${APP_NAME}"
@@ -56,8 +56,8 @@ pipeline {
             steps {
                 script{
                     sh """
-                    git config --global user.name "vikram"
-                    git config --global user.email "vikram@gmail.com"
+                    git config --global user.name "Rajanidodamaladoddi"
+                    git config --global user.email "rajaninandu1999@gmail.com"
                     git add deployment.yml
                     git commit -m 'Updated the deployment file' """
                     withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'pass', usernameVariable: 'user')]) {
